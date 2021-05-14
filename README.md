@@ -6,6 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm run cypress`
+
+Runs local cypress - will open up interactive cypress to run tests. Make sure you have the server running for the tests to run against!
+
+### `npm run cypress-cukes`
+
+Runs cypress headless. Make sure you have the server running for the tests to run against!
+
 ### `npm start`
 
 Runs the app in the development mode.  
@@ -29,8 +37,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
