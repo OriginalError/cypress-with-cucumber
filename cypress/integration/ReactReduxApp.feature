@@ -29,3 +29,14 @@ Feature: React Redux Generated Application
     When I press the decrement button
     Then I see the counter
     And the counter is -1
+
+  @focus
+  Scenario Outline: Counter Manipulation
+    Given I open react
+    When I press the <increment or decrement> button <number> times
+    Then the counter is <counter value>
+
+    Examples:
+    | increment or decrement | number | counter value |
+    | increment              | 10     | 10            |
+    | decrement              | 10     | -10           |
