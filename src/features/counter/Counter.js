@@ -24,14 +24,16 @@ export function Counter() {
           className={styles.button}
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
+          cy-test="decrement"
         >
           -
         </button>
-        <span className={styles.value}>{count}</span>
+        <span className={styles.value} cy-test="counter">{count}</span>
         <button
           className={styles.button}
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
+          cy-test="increment"
         >
           +
         </button>
