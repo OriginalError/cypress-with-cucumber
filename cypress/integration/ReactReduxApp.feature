@@ -15,3 +15,17 @@ Feature: React Redux Generated Application
     Then I see the counter
     And the counter is 0
     
+  @focus  
+  Scenario: Increment Counter
+    Given I open react
+    And the counter is 0
+    When I press the increment button
+    Then I see the counter
+    And the counter is 1
+
+  @focus
+  Scenario: Decrement Counter
+    Given I open react
+    When I press the decrement button
+    Then I see the counter
+    And the counter is -1
