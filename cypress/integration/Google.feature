@@ -12,5 +12,4 @@ Feature: Google Main Page
     Given I open Google page
     And I can type "Ray Romano" into the search bar
     When I press enter in the search bar
-    # Then I see links
     And one link is to "https://en.wikipedia.org/wiki/Ray_Romano"
