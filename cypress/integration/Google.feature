@@ -10,4 +10,7 @@ Feature: Google Main Page
   @focus
   Scenario: I can type into the search box
     Given I open Google page
-    And I can type "I love cheese" into the search bar
+    And I can type "Ray Romano" into the search bar
+    When I press enter in the search bar
+    # Then I see links
+    And one link is to "https://en.wikipedia.org/wiki/Ray_Romano"

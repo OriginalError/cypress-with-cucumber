@@ -6,5 +6,17 @@ Given('I open Google page', () => {
 })
 
 And(`I can type {string} into the search bar`, (string) => {
-    cy.get('[title="Search"]').type(string)
+  cy.get('[title="Search"]').type(string)
+})
+
+And('I press enter in the search bar', () => {
+  cy.get('[title="Search"]').type('{enter}');
+})
+
+// Then('I see links', () => {
+//   cy.get('[id="search"]').contains('<a href=*')
+// })
+
+And('one link is to {string}', (string) => {
+  cy.get(`[href="${string}"]`)
 })
