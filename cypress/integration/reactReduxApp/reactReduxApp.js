@@ -1,14 +1,9 @@
 import { Given, Then, When } from "cypress-cucumber-preprocessor/steps";
-import { getCounter } from "./reactReduxPage"
+import { getCounter, goToPage } from "./reactReduxPage"
 import { incrementCounter, decrementCounter } from "./reactReduxFlow"
 
-function getElementByTagAndId(tag, id) {
-  return cy.get(`[${tag}="${id}"]`)
-}
-
-// const reactUrl = 'http://localhost:3000'
 Given('I open react', () => {
-  cy.visit('http://localhost:3000')
+  goToPage()
 })
 
 Then('I see the counter', () => {

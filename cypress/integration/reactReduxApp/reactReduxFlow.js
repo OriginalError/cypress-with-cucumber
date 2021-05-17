@@ -10,4 +10,7 @@ function decrementCounter() {
     .click()
 }
 
-module.exports = { incrementCounter, decrementCounter }
+module.exports = { 
+      incrementCounter
+    , decrementCounter 
+}
