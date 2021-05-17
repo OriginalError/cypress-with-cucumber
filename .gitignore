@@ -7,8 +7,9 @@
 
 # testing
 /coverage
-/cypress/screenshots
 /cypress/videos
+/cypress/screenshots
+/cypress/cucumber-json
 
 # production
 /build
