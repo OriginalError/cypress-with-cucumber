@@ -10,6 +10,8 @@
 /cypress/videos
 /cypress/screenshots
 /cypress/cucumber-json
+cucumber_report.html
+cucumber_report.html.json
 
 # production
 /build
