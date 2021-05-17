@@ -1,19 +1,9 @@
 import { Given, Then, When } from "cypress-cucumber-preprocessor/steps";
+import { getCounter } from "./reactReduxPage"
+import { incrementCounter, decrementCounter } from "./reactReduxFlow"
 
 function getElementByTagAndId(tag, id) {
   return cy.get(`[${tag}="${id}"]`)
-}
-
-function getCounter() {
-  return getElementByTagAndId("cy-test", "counter")
-}
-
-function getIncrementButton() {
-  return getElementByTagAndId("cy-test", "increment")
-}
-
-function getDecrementButton() {
-  return getElementByTagAndId("cy-test", "decrement")
 }
 
 // const reactUrl = 'http://localhost:3000'
@@ -31,27 +21,23 @@ Then(`the counter is {int}`, (counterNumber) => {
 })
 
 When(`I press the increment button`, () => {
-  getIncrementButton()
-    .click()
+  incrementCounter()
 })
 
 When(`I press the increment button {int} times`, (clicks) => {
   // you can use js inline for looping - simplicity
   for (let i = 0; i < clicks; i++) { 
-    getIncrementButton()
-      .click()
+    incrementCounter()
   }
 })
 
 When(`I press the decrement button`, () => {
-  getDecrementButton()
-    .click()
+  decrementCounter()
 })
 
 When(`I press the decrement button {int} times`, (clicks) => {
   // you can use js inline for looping - simplicity
   for (let i = 0; i < clicks; i++) { 
-    getDecrementButton()
-      .click()
+    decrementCounter()
   }
 })
